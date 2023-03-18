@@ -1,0 +1,7 @@
+.firstletter::first-letter {  font-size: 200%;}        
+h2 {color: orange; text-shadow: 2px 1px black; font-style: italic;}
+.float {float: left;}
+.bold {font-weight: bold;}
+a:link    { color: orange; }
+a:visited { color: black; }
+a:hover   { color: green; }
