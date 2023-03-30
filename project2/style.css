@@ -60,11 +60,6 @@ main {
   padding: 10px;
 }
 
-#socialIcons a {
-  display: inline-block;
-  margin: 0 10px;
-}
-
 #socialIcons a img {
   height: 50px;
   vertical-align: middle;
@@ -73,6 +68,10 @@ main {
 #footer {
   text-align: center;
   padding: 10px;
+}
+
+#footer a:hover {
+  color: brown;
 }
 
 form {
