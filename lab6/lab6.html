@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function pic(param) {
+              if (param.value === 'Christmas') {
+                document.getElementById("img").src = "./christmas.png";
+                
+              } else if (param.value === 'Halloween') {
+                document.getElementById("img").src = "./halloween.jpg";
+                
+              } else if (param.value === 'Easter')  {
+                document.getElementById("img").src = "./easter.png";
+              }
+            }
+          </script>
+        <title>Happy Holidays</title>
+    </head>
+    <body>
+        <main>
+  <input type="button" value="Christmas" onclick="pic(this)" />
+  <input type="button" value="Halloween" onclick="pic(this)" />
+  <input type="button" value="Easter" onclick="pic(this)" />
+  <br>
+    <p>
+        <img src="" id="img" style="height:300px;" />
+    </p>
+</main>
+</body>
+</html>
