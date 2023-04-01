@@ -3,24 +3,17 @@
     <head>
         <script>
             function pic(param) {
-              if (param.value === 'Christmas') {
-                document.getElementById("img").src = "./christmas.png";
-                
-              } else if (param.value === 'Halloween') {
-                document.getElementById("img").src = "./halloween.jpg";
-                
-              } else if (param.value === 'Easter')  {
-                document.getElementById("img").src = "./easter.png";
-              }
-            }
+            var img = document.getElementById("img");
+            img.src = param.getAttribute("data-img");
+          }
           </script>
         <title>Happy Holidays</title>
     </head>
     <body>
         <main>
-  <input type="button" value="Christmas" onclick="pic(this)" />
-  <input type="button" value="Halloween" onclick="pic(this)" />
-  <input type="button" value="Easter" onclick="pic(this)" />
+            <input type="button" value="Christmas" data-img="./christmas.png" onclick="pic(this)" />
+            <input type="button" value="Halloween" data-img="./halloween.jpg" onclick="pic(this)" />
+            <input type="button" value="Easter" data-img="./easter.png" onclick="pic(this)" />
   <br>
     <p>
         <img src="" id="img" style="height:300px;" />
