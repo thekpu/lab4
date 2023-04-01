@@ -3,9 +3,16 @@
     <head>
         <script>
             function pic(param) {
-            var img = document.getElementById("img");
-            img.src = param.getAttribute("data-img");
-          }
+              if (param.value === 'Christmas') {
+                document.getElementById("img").src = "./christmas.png";
+                
+              } else if (param.value === 'Halloween') {
+                document.getElementById("img").src = "./halloween.jpg";
+                
+              } else if (param.value === 'Easter')  {
+                document.getElementById("img").src = "./easter.png";
+              }
+            }
           </script>
         <title>Happy Holidays</title>
     </head>
