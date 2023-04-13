@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Homepage</title>
+  </head>
+  <body>
+    <header>
+      <div style="text-align: center;">
+        <a href="./homepage.html" title="Joel Pagini Web Designer"><img src=".\jp_logo.png" height="100" alt="Joel Pagini Logo"></a>
+      </div>
+    </header>
+    <nav>
+      <div class="navigation" tabindex="1">
+        <a href="./homepage.html" tabindex="2">Home</a>
+        <a href="./services.html" tabindex="3">Services</a>
+        <a href="./portfolio.html" tabindex="4">Portfolio</a>
+        <a href="./aboutme.html" tabindex="5">About Me</a>
+        <a href="./get_a_quote.html" tabindex="6">Get a Quote</a>
+        <a href="./getintouch.html" tabindex="7">Get in Touch</a>
+        <input type="text" placeholder="Search.." tabindex="8">
+      </div>
+    </nav>
+        <form style="margin: auto; width: 500px;">
+            <label for="pages" tabindex="9"><strong>Number of Pages:</strong></label>
+            <input id="pages" name="pages" type="number" min="0" max="50" step="1" required><br><br>
+            <label for="logo" tabindex="10"><strong>Do you need a logo?</strong></label>
+            <input id="logo" name="logo" type="checkbox"><br><br>
+            <label for="ecommerce" tabindex="11"><strong>Is the website an e-commerce?</strong></label>
+            <input id="ecommerce" name="ecommerce" type="checkbox"><br><br>
+            <label for="domain" tabindex="12"><strong>Do you need a domain name research?</strong></label>
+            <input id="domain" name="domain" type="checkbox"><br><br>
+            <label for="total" tabindex="13"><strong>Total:</strong></label><br>
+            <input id="total" name="total" type="text" readonly><br>
+            <label for="with_tax" tabindex="14"><strong>Total with Tax:</strong></label><br>
+            <input id="with_tax" name="with_tax" type="text" readonly><br>
+            <button class="button" type="button" onclick="calculateTotal()" tabindex="15">Calculate</button>
+            <p>* the price is only approximate, the final price will be based on client's needs and requests.</p>
+          </form>
+          <div class="social">
+            <div id="socialIcons">
+              <a href="https://www.facebook.com/joel.pagini/" title="Follow me on Facebook" tabindex="12"><img class="Facebook" alling="center" height="50px" src=".\f_logo_RGB-Blue_58.png" alt="Facebook Icon"></a><a href="https://www.instagram.com/joelpagi/" title="Follow me on Instagram" tabindex="13"><img class="Instagram" alling="center" height="50px" src=".\Instagram_Glyph_Gradient.png" alt="Instagram Icon"></a>
+            </div>
+          </div>
+    <br>
+    <footer>
+      <div id="footer">
+        <p>Copywright © 2023 Joel Pagini</p>
+        <p><a href="mailto:joel.pagini86@gmail.com" tabindex="18">joel.pagini86@gmail.com</a></p>
+      </div>
+    </footer>
+    <script>
+        function calculateTotal() {
+          var tax = 0.13;
+          var pageCost = 100;
+          var logoCost = 150;
+          var ecommerceCost = 300;
+          var domainCost = 50;
+          var pages = parseInt(document.getElementById("pages").value);
+          var logoCheckbox = document.getElementById("logo");
+          var ecommerceCheckbox = document.getElementById("ecommerce");
+          var domainCheckbox = document.getElementById("domain");
+          var total = pages * pageCost;
+  
+          if (logoCheckbox.checked) {
+            total += logoCost;
+          }
+  
+          if (ecommerceCheckbox.checked) {
+            total += ecommerceCost;
+          }
+  
+          if (domainCheckbox.checked) {
+            total += domainCost;
+          }
+  
+          var totalWithTax = total + (total * tax);
+          document.getElementById("total").value = total.toFixed(2);
+          document.getElementById("with_tax").value = totalWithTax.toFixed(2);
+        }
+      </script>
+  </body>
+</html>

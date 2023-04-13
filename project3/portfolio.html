@@ -24,7 +24,7 @@
     </nav>
     <table style="margin-left: auto; margin-right: auto;">
       <tr>
-        <td>
+        <td align="center">
           <button class="button" onclick="showImage1()" tabindex="9">Coffe Bar</button>
           <button class="button" onclick="showImage2()" tabindex="10">Halloween Store</button>
           <button class="button" onclick="showImage3()" tabindex="11">Greeting Card</button>
@@ -34,22 +34,17 @@
         <td>
           <img id="portfolio-image" src="" width="400"; >
         </td>
+      <tr>
         <td style="width: 100;">
           <p id="portfolio-description"></p>
-          <br>
         </td>
       </tr>
     </table>
     <div class="social">
-        <div id="socialIcons">
-          <a href="https://www.facebook.com/joel.pagini/" title="Follow me on Facebook" tabindex="12">
-            <img class="Facebook" alling="center" height="50px" src=".\f_logo_RGB-Blue_58.png" alt="Facebook Icon">
-          </a>&emsp;
-          <a href="https://www.instagram.com/joelpagi/" title="Follow me on Instagram" tabindex="13">
-            <img class="Instagram" alling="center" height="50px" src=".\Instagram_Glyph_Gradient.png" alt="Instagram Icon">
-          </a>
-        </div>
+      <div id="socialIcons">
+        <a href="https://www.facebook.com/joel.pagini/" title="Follow me on Facebook" tabindex="12"><img class="Facebook" alling="center" height="50px" src=".\f_logo_RGB-Blue_58.png" alt="Facebook Icon"></a><a href="https://www.instagram.com/joelpagi/" title="Follow me on Instagram" tabindex="13"><img class="Instagram" alling="center" height="50px" src=".\Instagram_Glyph_Gradient.png" alt="Instagram Icon"></a>
       </div>
+    </div>
       <br>
       <footer>
         <div id="footer">
@@ -64,7 +59,7 @@
         }
         function showImage2() {
           document.getElementById("portfolio-image").src = "./christmas.png";
-          document.getElementById("portfolio-description").innerHTML = "Greeting Car Desing created for a customer";
+          document.getElementById("portfolio-description").innerHTML = "Greeting Card Desing created for a customer";
         }
         function showImage3() {
           document.getElementById("portfolio-image").src = "./halloweenstore.png";
